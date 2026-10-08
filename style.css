@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at top, #243b55, #050816 70%);
+  color: white;
+  min-height: 100vh;
+}
+
+.game {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 15px;
+}
+
+header {
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 12px;
+}
+
+header h1 {
+  font-size: 25px;
+  color: #00eaff;
+  text-shadow: 0 0 15px #00eaff;
+}
+
+header p {
+  color: #aaa;
+  margin-top: 5px;
+}
+
+section {
+  background: rgba(15, 23, 42, .9);
+  border: 1px solid #263b5e;
+  border-radius: 16px;
+  padding: 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.3);
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.bar {
+  height: 13px;
+  background: #111827;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.bar div {
+  height: 100%;
+  width: 100%;
+  transition: .3s;
+}
+
+.hp {
+  background: #22c55e;
+}
+
+.mp {
+  background: #3b82f6;
+}
+
+.exp {
+  background: #facc15;
+}
+
+.enemy-hp {
+  background: #ef4444;
+}
+
+.enemy-icon {
+  font-size: 80px;
+  text-align: center;
+  margin: 15px;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.battle-log {
+  min-height: 70px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.actions,
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 14px 8px;
+  background: #172554;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid #31518a;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(.95);
+}
+
+.actions button:nth-child(1) {
+  background: #991b1b;
+}
+
+.actions button:nth-child(2) {
+  background: #7e22ce;
+}
+
+.actions button:nth-child(3) {
+  background: #166534;
+}
+
+.actions button:nth-child(4) {
+  background: #374151;
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.75);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.popup-box {
+  width: 100%;
+  max-width: 420px;
+  background: #0f172a;
+  border: 1px solid #00eaff;
+  border-radius: 18px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0,234,255,.25);
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 7px 11px;
+  background: #991b1b;
+}
+
+.popup h2 {
+  color: #00eaff;
+  margin-bottom: 15px;
+}
+
+.item {
+  background: #172033;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item button {
+  padding: 8px;
+  background: #2563eb;
+}
